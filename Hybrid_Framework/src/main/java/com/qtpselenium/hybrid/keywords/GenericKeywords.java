@@ -109,8 +109,8 @@ public class GenericKeywords {
     }
 
     public void reportFailure(String message) throws IOException {
-        test.log(Status.FAIL, message);
         attachScreenshot(Status.FAIL);
+        test.log(Status.FAIL, message);
         Assert.fail(message);
     }
 
